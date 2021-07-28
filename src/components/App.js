@@ -1,6 +1,19 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
+
+
 function App() {
+
+  const [location, setLocation] = useState(false);
+
+  useEffect(() => {
+    const geo = navigator.geolocation;
+    geo.getCurrentPosition((position)=> {
+      console.log(position.coords.latitude, position.coords.longitude);
+      setLocation(true);
+    })
+  }, [])
+
   return (
     <Fragment>
       <h3>The weather in your location (location)</h3>
