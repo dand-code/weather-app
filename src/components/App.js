@@ -70,6 +70,9 @@ function App() {
           <button onClick={updateWeatherPage}>What's the weather today?</button>
         </main>
 
+        <footer>
+          <p>Made with ❤️ by <a href="https://github.com/dand-code" target="_blank" rel="noreferrer">dand-code</a></p>
+        </footer>
       </Fragment>
     );
   }
