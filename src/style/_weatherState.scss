@@ -1,0 +1,14 @@
+.sun{
+    background-color: #FFCBCA;
+}
+.sun .page-status{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    position:absolute;
+    background-color: #ff7842;
+    z-index: 1;
+    top: 10rem;
+    left: 20vw;
+}
