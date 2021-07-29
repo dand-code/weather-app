@@ -1,0 +1,13 @@
+.header{
+    grid-area: header;
+    z-index: 2;
+    align-self:center;
+    word-wrap: break-word;
+    & h1{
+      max-width: 10em;
+      padding: 21px;
+      font-size: 3.2rem;
+      overflow-wrap: break-word;
+      padding: 6px;
+    }
+  }

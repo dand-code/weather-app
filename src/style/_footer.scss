@@ -1,0 +1,9 @@
+.footer{
+    grid-area: footer;
+    text-align:center;
+    align-self: end;
+    color: grey;
+    & a{
+      color:#ff7842;
+    }
+}
