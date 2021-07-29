@@ -61,13 +61,13 @@ function App() {
         
           <main className="main">
             <ul className="main-list">
-              <li>Today: {weather['weather'][0]['description']}</li>
-              <li>Feels Like: {weather['main']['feels_like']}°</li>
-              <li>Actual temperature: {weather['main']['temp']}°</li>
-              <li>Max temperature: {weather['main']['temp_max']}°</li>
-              <li>Min Temperature: {weather['main']['temp_min']}°</li>
-              <li>Pressure: {weather['main']['pressure']} hpa</li>
-              <li>Air humidity: {weather['main']['humidity']}%</li>
+              <li>Today: <span className="main-list_data">{weather['weather'][0]['description']}</span></li>
+              <li>Feels Like: <span className="main-list_data">{weather['main']['feels_like']}°</span></li>
+              <li>Actual temperature: <span className="main-list_data">{weather['main']['temp']}°</span></li>
+              <li>Max temperature: <span className="main-list_data">{weather['main']['temp_max']}°</span></li>
+              <li>Min Temperature: <span className="main-list_data">{weather['main']['temp_min']}°</span></li>
+              <li>Pressure: <span className="main-list_data">{weather['main']['pressure']} hpa</span></li>
+              <li>Air humidity: <span className="main-list_data">{weather['main']['humidity']}%</span></li>
             </ul>
             <button className="main-btn"onClick={updateWeatherPage}>What's the weather today?</button>
           </main>
