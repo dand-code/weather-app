@@ -2,36 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "../style/App.scss";
 import "../style/_weatherState.scss";
-import {
-  isPushNotificationSupported,
-  sendNotification,
-  initializePushNotifications,
-  registerServiceWorker
-} from "./push-notification";
  
-
-
-
 
 function App() {
 // data
   const [location, setLocation] = useState(false);
   const [weather, setWeather] = useState(false);
-
-
-  const pushNotificationSuported = isPushNotificationSupported();
-  if (pushNotificationSuported) {
-  registerServiceWorker();
-    initializePushNotifications().then(function(consent){
-      if(consent === 'granted') {
-       sendNotification();
-      }
-    });
-  }
-
-
-
-
 
   useEffect(() => {
     const geo = navigator.geolocation;
@@ -58,11 +34,6 @@ function App() {
   }
 
 
-  useEffect(() => {
-    Notification.requestPermission(function (status) {
-      console.log('Notification permission status:', status);
-    })
-  }, []);
 //reload page
   const updateWeatherPage = () => {
     window.location.reload();
