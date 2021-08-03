@@ -7,7 +7,7 @@ Working on this project, I would like to try using the **Axios** library to make
 
 Excited to see the results :)
 
-<img src='./mockup-app.png' >
+<img src='./mockup-app.png' width='300rem' >
 
 <!-- > Note: I was so excited to experiment the new skills that I forgot to use differents branches to versions control. I expect to take care more about it right now. \O/  -->
 
