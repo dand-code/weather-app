@@ -20,7 +20,7 @@ function App() {
 
 // get API information
   let getWeather = async (lat, long) => {
-    let res = await axios.get("http://api.openweathermap.org/data/2.5/weather", {
+    let res = await axios.get("https://api.openweathermap.org/data/2.5/weather", {
       params: {
         lat: lat,
         lon: long,
