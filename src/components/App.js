@@ -69,7 +69,7 @@ function App() {
               <li>Pressure: <span className="main-list_data">{weather['main']['pressure']} hpa</span></li>
               <li>Air humidity: <span className="main-list_data">{weather['main']['humidity']}%</span></li>
             </ul>
-            <button className="main-btn"onClick={updateWeatherPage}>What's the weather today?</button>
+            <button className="main-btn"onClick={updateWeatherPage}>What's the weather now?</button>
           </main>
           <footer className="footer">
             <p>Made with <i className="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/dand-code" target="_blank" rel="noreferrer">dand-code</a></p>
