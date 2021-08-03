@@ -72,7 +72,7 @@ function App() {
             <button className="main-btn"onClick={updateWeatherPage}>What's the weather today?</button>
           </main>
           <footer className="footer">
-            <p>Made with ❤️ by <a href="https://github.com/dand-code" target="_blank" rel="noreferrer">dand-code</a></p>
+            <p>Made with <i className="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/dand-code" target="_blank" rel="noreferrer">dand-code</a></p>
           </footer>
         </div>
     );

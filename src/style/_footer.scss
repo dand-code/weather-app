@@ -4,6 +4,10 @@
     align-self: end;
     color: #2C394B;
     & a{
-      color:#ff7842;
+      color:#5089C6;
+      text-decoration: none;
+    }
+    & a:hover{
+      background-color: lavender;
     }
 }
