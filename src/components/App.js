@@ -41,14 +41,14 @@ function App() {
 // render aplication
   if(location === false){
     return (
-      <div className="page">
-        <h2>You need habilit the browser location</h2>
+      <div className="page page-loading">
+        <h2 className="page-loading_title">You need habilit the browser location</h2>
       </div>
     )
   } else if (weather === false) {
     return (
-      <div className="page">
-        <h2>Load the weather...</h2>
+      <div className="page page-loading">
+        <h2 className="page-loading_title">Load the weather...</h2>
       </div>
     )
   } else {

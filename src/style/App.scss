@@ -9,14 +9,24 @@
 }
 
 .page{
+  
   display:grid;
   grid-template-areas: 'header' 'main' 'footer';
   padding: 0.2rem 2.5rem;
   min-height: 100vh;
-  border: 1em solid blue;
+  border: 1em solid #5089C6;
   justify-content: center;
 }
 
-
+.page-loading{
+  background-color: #5089C6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_title{
+    color: #FFAA4C;
+    font-size: 2.1rem;
+  }
+}
 
 
