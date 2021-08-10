@@ -5,10 +5,19 @@ import "../style/_weatherState.scss";
 
 function App() {
 // data
-  const [location, setLocation] = useState(false);
-  const [weather, setWeather] = useState(false);
+const [location, setLocation] = useState(false);
+const [weather, setWeather] = useState(false);
+  
+//service worker  
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").then(() => { console.log('Service Worker Registered'); });
+};
 
+  
+/* HANDLE DATA: */
+
+//get user geolocation
   useEffect(() => {
     const geo = navigator.geolocation;
     geo.getCurrentPosition((position) => {
@@ -38,7 +47,8 @@ function App() {
     window.location.reload();
   }
 
-// render aplication
+/* RENDER APLICATION */
+ 
   if(location === false){
     return (
       <div className="page page-loading">
@@ -60,9 +70,9 @@ function App() {
           </header>
         
           <main className="main">
-            <ul className="main-list">
+          <ul className="main-list">
               <li>Today: <span className="main-list_data">{weather['weather'][0]['description']}</span></li>
-              <li>Feels Like: <span className="main-list_data">{weather['main']['feels_like']}°</span></li>
+              <li>Feels Like:<span className="main-list_data">{weather['main']['feels_like']}°</span></li>
               <li>Actual temperature: <span className="main-list_data">{weather['main']['temp']}°</span></li>
               <li>Max temperature: <span className="main-list_data">{weather['main']['temp_max']}°</span></li>
               <li>Min Temperature: <span className="main-list_data">{weather['main']['temp_min']}°</span></li>
@@ -77,5 +87,5 @@ function App() {
         </div>
     );
   }
-}
+};
 export default App;
