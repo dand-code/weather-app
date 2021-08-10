@@ -1,14 +1,14 @@
 /* eslint-disable no-restricted-globals */
-self.importScripts("info.js");
+self.importScripts("./info.js");
 
 const cacheName = 'appNowWeather';
 const appShellFiles = [
-    '/weather-app/public/',
-    '/weather-app/public/index.html',
-    '/weather-app/public/info.js',
-    '/weather-app/public/favicon.ico',
-    '/weather-app/public/logo192.png',
-    '/weather-app/public/logo512.png',
+    '/public',
+    '/public/index.html',
+    '/public/info.js',
+    '/public/favicon.ico',
+    '/public/logo192.png',
+    '/public/logo512.png',
 ];
 
 const contentToCache = appShellFiles;
