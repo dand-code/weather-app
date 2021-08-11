@@ -3,12 +3,12 @@ self.importScripts("./info.js");
 
 const cacheName = 'appNowWeather';
 const appShellFiles = [
-    '/public',
-    '/public/index.html',
-    '/public/info.js',
-    '/public/favicon.ico',
-    '/public/logo192.png',
-    '/public/logo512.png',
+    './public',
+    './public/index.html',
+    './public/info.js',
+    './public/favicon.ico',
+    './public/logo192.png',
+    './public/logo512.png',
 ];
 
 const contentToCache = appShellFiles;
@@ -37,4 +37,12 @@ self.addEventListener('fetch', (e) => {
     cache.put(e.request, response.clone());
     return response;
   })());
+});
+
+self.addEventListener('activate', e => {
+  console.log('Service Worker Activado');
+
+  console.log(e);
+
+
 });
