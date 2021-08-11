@@ -19,7 +19,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/weather-app/",
+  "start_url": "/",
   "background_color": "#FFFFFF",
   "display": "standalone",
   "theme_color": "#6850ff",
