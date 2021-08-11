@@ -22,7 +22,6 @@
   "start_url": "/weather-app/",
   "background_color": "#FFFFFF",
   "display": "standalone",
-  "scope": "/",
   "theme_color": "#6850ff",
   "orientation": "portrait"
 }

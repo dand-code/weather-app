@@ -11,7 +11,7 @@ const [weather, setWeather] = useState(false);
 //service worker  
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./sw.js").then(() => { console.log('Service Worker Registered'); });
+  navigator.serviceWorker.register("./weather-app/public/sw.js").then(() => { console.log('Service Worker Registered'); });
 };
 
   
