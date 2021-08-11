@@ -10,9 +10,9 @@ const [weather, setWeather] = useState(false);
   
 //service worker  
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/public/sw.js").then(() => { console.log('Service Worker Registered'); });
-};
+// if ("serviceWorker" in navigator) {
+//   navigator.serviceWorker.register("/public/sw.js").then(() => { console.log('Service Worker Registered'); });
+// };
 
   
 /* HANDLE DATA: */
