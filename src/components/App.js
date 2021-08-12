@@ -24,6 +24,14 @@ if ('serviceWorker' in navigator) {
   console.log('Service Worker is not supported by browser.');
 }
   
+window.addEventListener("beforeinstallprompt", function(e) {
+  // log the platforms provided as options in an install prompt
+  console.log(e.platforms); // e.g., ["web", "android", "windows"]
+  e.userChoice.then(function(choiceResult) {
+    console.log(choiceResult.outcome); // either "accepted" or "dismissed"
+  });
+});
+  
 /* HANDLE DATA: */
 
 //get user geolocation
