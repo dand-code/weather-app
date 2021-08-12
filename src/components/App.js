@@ -69,7 +69,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
   if(location === false){
     return (
       <div className="page page-loading">
-        <h2 className="page-loading_title">You need habilit the browser location</h2>
+        <h2 className="page-loading_title">We are trying to access your location</h2>
       </div>
     )
   } else if (weather === false) {
