@@ -3,12 +3,12 @@ self.importScripts("./info.js");
 
 const cacheName = 'appNowWeather';
 const appShellFiles = [
-    './public',
-    './public/index.html',
-    './public/info.js',
-    './public/favicon.ico',
-    './public/logo192.png',
-    './public/logo512.png',
+    './',
+    './index.html',
+    './info.js',
+    './favicon.ico',
+    './logo192.png',
+    './logo512.png',
 ];
 
 const contentToCache = appShellFiles;
