@@ -20,10 +20,9 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "https://dand-code.github.io/weather-app/",
+  "start_url": "./",
   "background_color": "#FDFCE9",
   "display": "standalone",
-  "scope": "https://dand-code.github.io/weather-app/",
-  "theme_color": "#6850ff",
-  "orientation": "portrait"
+  "scope": "./",
+  "theme_color": "#6850ff"
 }
