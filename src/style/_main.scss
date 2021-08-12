@@ -17,12 +17,12 @@
     &-btn{
       padding:1.2em;
       background-color: transparent;
-      border: 1.2px solid blue; 
+      border: 1.2px solid #FFC93C; 
       border-radius:20px; 
       transition: all .2s ease-in-out;
     }
     &-btn:hover{
-      background-color: blue;
+      background-color: #FFC93C;
       color: white; 
       transform: scale(1.2);
     }
