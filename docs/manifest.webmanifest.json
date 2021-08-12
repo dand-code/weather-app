@@ -19,10 +19,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "https://dand-code.github.io/weather-app/",
   "background_color": "#FFFFFF",
   "display": "standalone",
-  "scope": "/",
+  "scope": "https://dand-code.github.io/weather-app/",
   "theme_color": "#6850ff",
   "orientation": "portrait"
 }
