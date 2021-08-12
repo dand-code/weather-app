@@ -16,11 +16,12 @@
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ],
   "start_url": "https://dand-code.github.io/weather-app/",
-  "background_color": "#FFFFFF",
+  "background_color": "#FDFCE9",
   "display": "standalone",
   "scope": "https://dand-code.github.io/weather-app/",
   "theme_color": "#6850ff",
