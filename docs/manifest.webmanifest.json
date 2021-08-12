@@ -19,10 +19,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "/weather-app/",
   "background_color": "#FFFFFF",
   "display": "standalone",
-  "scope": "/",
+  "scope": "/weather-app/",
   "theme_color": "#6850ff",
   "orientation": "portrait"
 }
