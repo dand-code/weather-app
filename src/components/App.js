@@ -25,10 +25,9 @@ if ('serviceWorker' in navigator) {
 }
   
 window.addEventListener("beforeinstallprompt", function(e) {
-  // log the platforms provided as options in an install prompt
-  console.log(e.platforms); // e.g., ["web", "android", "windows"]
+  console.log(e.platforms);
   e.userChoice.then(function(choiceResult) {
-    console.log(choiceResult.outcome); // either "accepted" or "dismissed"
+    console.log(choiceResult.outcome); // "accepted" or "dismissed"
   });
 });
   
