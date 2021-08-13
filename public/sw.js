@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 self.importScripts("./info.js");
 
-const cacheName = 'appNowWeather';
+const cacheName = 'appNowWeather-v1';
 const appShellFiles = [
     './',
     './index.html',
@@ -39,10 +39,12 @@ self.addEventListener('fetch', (e) => {
   })());
 });
 
-self.addEventListener('activate', e => {
-  console.log('Service Worker Activado');
 
-  console.log(e);
-
-
+self.addEventListener('activate', (e) => {
+  e.waitUntil(caches.keys().then((keyList) => {
+    Promise.all(keyList.map((key) => {
+      if (key === cacheName) { return; }
+      caches.delete(key);
+    }))
+  })());
 });
