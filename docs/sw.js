@@ -39,12 +39,22 @@ self.addEventListener('fetch', (e) => {
   })());
 });
 
+// self.addEventListener('activate', e => {
+//   console.log('Service Worker Activado');
+//   console.log(e);
 
-self.addEventListener('activate', (e) => {
-  e.waitUntil(caches.keys().then((keyList) => {
-    Promise.all(keyList.map((key) => {
-      if (key === cacheName) { return; }
-      caches.delete(key);
-    }))
-  })());
+// });
+
+self.addEventListener('activate', (event) => {
+  let cacheKeeplist = ['appNowWeather-v1'];
+
+  event.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (cacheKeeplist.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
