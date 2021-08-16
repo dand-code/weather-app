@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NotificationBtn from './NotificationBtn';
 import "../style/App.scss";
 import "../style/_weatherState.scss";
 
@@ -95,7 +96,10 @@ window.addEventListener("beforeinstallprompt", function(e) {
               <li>Pressure: <span className="main-list_data">{weather['main']['pressure']} hpa</span></li>
               <li>Air humidity: <span className="main-list_data">{weather['main']['humidity']}%</span></li>
             </ul>
-            <button className="main-btn"onClick={updateWeatherPage}>How's the weather now?</button>
+          <div>
+            <button className="main-btn" onClick={updateWeatherPage}>How's the weather now?</button>
+            <NotificationBtn dataWeather={weather}/>
+          </div>
           </main>
           <footer className="footer">
             <p>Made with <i className="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/dand-code" target="_blank" rel="noreferrer">dand-code</a></p>
