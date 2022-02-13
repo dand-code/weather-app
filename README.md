@@ -11,11 +11,10 @@ Excited to see the results :)
 
 <!-- > Note: I was so excited to experiment the new skills that I forgot to use differents branches to versions control. I expect to take care more about it right now. \O/  -->
 
-###### OK, lets talk about what I have learn (up to now)...
+###### OK, let's talk about what I have learned (up to now)...
 
 ### User Geolocalization
-
-The first step to build this application was to be able to access the user's geolocation. For this I used the web API **geolocation**, which with the `getCurrentPosition` function, allows me to access this information.
+The first step to building this application was to be able to access the user's geolocation. For this, I used the web API **geolocation**, which with the `getCurrentPosition` function, allows me to access this information.
 
 
 ```javascript
@@ -52,7 +51,7 @@ It seemed easier for me to request an API with the Axios library because it was 
 
 ### Responsive design without media queries
 
-I was really eager to try this way to mock up a responsive web page without any media querie. The secret is in the use of some CSS Grid properties.
+I was eager to try this way to mock up a responsive web page without any media querie. The secret is in the use of some CSS Grid properties.
 
 With three code lines it was possible to do this magic:
 
