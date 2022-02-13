@@ -49,7 +49,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
       params: {
         lat: lat,
         lon: long,
-        appid: process.env.REACT_APP_OPEN_WHEATHER_KEY,
+        appid: "a1ef9cde27b16473c17b639a11f5ef65",
         lang: 'en',
         units: 'metric'
       }
