@@ -14,17 +14,21 @@ const appShellFiles = [
 const contentToCache = appShellFiles;
 
 // Installing Service Worker
-self.addEventListener('install', (e) => {
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    await cache.addAll(contentToCache);
-  })());
+self.addEventListener('install', e => {
+
+  const cachePromise = caches.open(cacheName).then(
+    cache => {
+      return cache.addAll(contentToCache)
+    }
+  )
+  
+  e.waitUntil(cachePromise);
 });
 
 
 //Fetching content using Service Worker
 
-self.addEventListener('fetch', (e) => {
+self.addEventListener('fetch', e => {
   e.respondWith((async () => {
     const r = await caches.match(e.request);
     if (r) return r;
@@ -47,5 +51,47 @@ self.addEventListener('activate', (event) => {
         }
       }));
     })
+  );
+});
+
+//Action notification
+self.addEventListener('notificationclose', function(e) {
+  var notification = e.notification;
+  var primaryKey = notification.data.primaryKey;
+
+  console.log('Closed notification: ' + primaryKey);
+});
+
+self.addEventListener('notificationclick', function(e) {
+  var notification = e.notification;
+  var primaryKey = notification.data.primaryKey;
+  var action = e.action;
+
+  if (action === 'close') {
+    notification.close();
+  } else {
+    clients.openWindow('http://www.example.com');
+    notification.close();
+  }
+});
+
+self.addEventListener('push', function(e) {
+  var options = {
+    body: 'This notification was generated from a push!',
+    icon: 'images/example.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: '2'
+    },
+    actions: [
+      {action: 'explore', title: 'Explore this new world',
+        icon: 'images/checkmark.png'},
+      {action: 'close', title: 'Close',
+        icon: 'images/xmark.png'},
+    ]
+  };
+  e.waitUntil(
+    self.registration.showNotification('Hello world!', options)
   );
 });
