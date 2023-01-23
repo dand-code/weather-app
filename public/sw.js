@@ -34,7 +34,7 @@ self.addEventListener('fetch', e => {
     if (r) return r;
     const response = await fetch(e.request);
     const cache = await caches.open(cacheName);
-    if (new RegExp('^(?:[a-z]+:)?//', 'i').test(new URL(evt.request.url).protocol) ) return;
+    if (new RegExp('^(?:[a-z]+:)?//', 'i').test(new URL(e.request.url).protocol) ) return;
     cache.put(e.request, response.clone());
     return response;
   })());

@@ -25,6 +25,7 @@ if ('serviceWorker' in navigator) {
 }
   
 window.addEventListener("beforeinstallprompt", function(e) {
+  e.preventDefault();
   console.log(e.platforms);
   e.userChoice.then(function(choiceResult) {
     console.log(choiceResult.outcome); // "accepted" or "dismissed"
