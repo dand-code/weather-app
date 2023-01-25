@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import "../style/App.scss";
 import "../style/_weatherState.scss";
@@ -26,7 +26,6 @@ if ('serviceWorker' in navigator) {
   
 window.addEventListener("beforeinstallprompt", function(e) {
   e.preventDefault();
-  console.log(e.platforms);
   e.userChoice.then(function(choiceResult) {
     console.log(choiceResult.outcome); // "accepted" or "dismissed"
   });
@@ -35,14 +34,17 @@ window.addEventListener("beforeinstallprompt", function(e) {
 /* HANDLE DATA: */
 
 //get user geolocation
-  useEffect(() => {
-    const geo = navigator.geolocation;
-    geo.getCurrentPosition((position) => {
-      console.log(position.coords.latitude, position.coords.longitude);
-      getWeather(position.coords.latitude, position.coords.longitude);
-      setLocation(true);
-    })
-  }, []);
+
+if ('geolocation' in navigator) {
+  console.log('geolocation IS available');
+  let geo = navigator.geolocation;
+  geo.getCurrentPosition((position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    getWeather(latitude, longitude);
+    setLocation(true);
+  })
+}
 
 // get API information
   let getWeather = async (lat, long) => {
